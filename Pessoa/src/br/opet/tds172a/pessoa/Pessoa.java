@@ -1,5 +1,7 @@
 package br.opet.tds172a.pessoa;
 
+import java.util.Date;
+
 /**
  * @author Heraldo 
  * @since 19/02/2018
@@ -19,14 +21,14 @@ public class Pessoa {
 	 * Atributo que representa a data de nascimento de uma pessoa. valor inicial"".
 	 * 	 
 	 */
-	public String dataNascimento = "";
+	public Date dataNascimento = new Date();
 	
 	/**
 	 * Construtor Pessoa da classe pessoa
 	 */
 	public Pessoa() 
 	{
-		System.out.println("Construtor Pessoa()");
+	
 	}
 
 	/**
@@ -50,7 +52,7 @@ public class Pessoa {
 	 * retorna o valor de uma data de nascimento a uma pessoa
 	 * @return - dataNascimento
 	 */
-	public String getDataNascimento() {
+	public Date getDataNascimento() {
 		return this.dataNascimento;
 	}
 	
@@ -59,7 +61,7 @@ public class Pessoa {
 	 * @param - novaDataNascimento
 	 * @return - dataNascimento é retornada
 	 */
-	public String setDataNascimento(String dataNascimento) {
+	public Date setDataNascimento(Date dataNascimento) {
 		return this.dataNascimento = dataNascimento;
 	}
 	
@@ -68,7 +70,7 @@ public class Pessoa {
 	 * @param - nome recebe novoNome
 	 * @param - datanscimento recebe novaDataNascimento
 	 */
-	public void informarPessoa(String nome, String dataNascimento) {
+	public void informarPessoa(String nome, Date dataNascimento) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 	}

@@ -1,4 +1,4 @@
-package br.opet.tds172a.MainTestesDiversos;
+package br.opet.tds172a.maintestesdiversos;
 
 import com.opet.util.Reader;
 

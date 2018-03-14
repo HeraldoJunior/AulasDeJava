@@ -1,4 +1,4 @@
-package br.opet.tds172a.MainTestesDiversos;
+package br.opet.tds172a.maintestesdiversos;
 
 import com.opet.util.Reader;
 
@@ -71,8 +71,9 @@ public class MainTesteComVetor {
 		String nome = Reader.readString();
 		
 		
-		Funcionario funcTempo = new Funcionario(matricula,nome);
-		listaFuncionarios[0] = funcTempo;
+	
+		//Funcionario funcTempo = new Funcionario(matricula,nome);
+		//listaFuncionarios[0] = funcTempo;
 		/**
 		 *
 		 * imprimir funcionario da lista com seus respectivos atributos que existe na classe funcionarios

@@ -1,4 +1,4 @@
-package br.opet.tds172a.MainTestesDiversos;
+package br.opet.tds172a.maintestesdiversos;
 
 import java.io.Reader;
 
@@ -35,7 +35,7 @@ public class MainTesteComMenu {
 		 * looping para execução do menu e das operações necessarias de acordo com a
 		 * opção.
 		 */
-		do {
+		// {
 			/**
 			 * Mensagens de boas vindas, e instruções das opções.
 			 */
@@ -48,24 +48,24 @@ public class MainTesteComMenu {
 			/**
 			 * leitor para receber a opção do menu
 			 */
-			menu = Reader.readInt();
+			//menu = Reader.readInt();
 
 			/**
 			 * opções dos menus por meio de switch e case
 			 */
-			switch (menu) {
+		//	switch (menu) {
 
 			/**
 			 * Opção para adicionar um novo funcionario, incrementando uma posição ao final
 			 * do processo com mensagens amigaveis.
 			 * 
 			 */
-			case 1:
+		//	case 1:
 				
 				/**
 				 * variavel contador para efetuar a contagem até o maximo da lista
 				 */
-				int contador = 0;
+			//	int contador = 0;
 				
 				/**
 				 * pergunta para o usuario inserir a matricula do funcionario a ser cadastrado
@@ -74,7 +74,7 @@ public class MainTesteComMenu {
 				/**
 				 * leitura do que for inserido na console para armazenar a matricula do usuario
 				 */
-				int matricula = Reader.readInt();
+				//int matricula = Reader.readInt();
 				
 				/**
 				 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
@@ -83,12 +83,12 @@ public class MainTesteComMenu {
 				/**
 				 * leitura do que for inserido na console para armazenar o nome do usuario
 				 */
-				String nome = Reader.readString();
+			    //String nome = Reader.readString();
 				
 				/**
 				 * Inicialização do objeto funcionario com matricula e nome
 				 */
-				Funcionario funcionarioNovo = new Funcionario(matricula, nome);
+				//Funcionario funcionarioNovo = new Funcionario(matricula, nome);
 				
 				/**
 				 * leitura do que for inserido na console para armazenar o nome do usuario
@@ -97,34 +97,36 @@ public class MainTesteComMenu {
 				/**
 				 * lista de funcionarios recebendo o funcionario novo e o contador incrementando 1 posição para não sobrescrever
 				 */
-				listaFuncionarios[contador] = funcionarioNovo;
-				contador++;
+				//listaFuncionarios[contador] = funcionarioNovo;
+				//contador++;
 
 				/**
 				 * Opção de sair do sistema pela opção de desejada e mensagem amigavel ao
 				 * usuario explicando
 				 */
-			case 9:
-				System.out.println("Obrigado por utilizar o Sistema!");
-				break;
+		//	case 9:
+		//		System.out.println("Obrigado por utilizar o Sistema!");
+			//	break;
 			/**
 			 * Opção para caso alguma outra tecla seja in incorreta seja inserida, mensagem
 			 * amigavel ao usuario explicando
 			 */
-			default:
-				System.out.println("Opção invalida, digite novamente.");
-				break;
-			}
+			//default:
+			//	System.out.println("Opção invalida, digite novamente.");
+			//	break;
+		//	}
 			/**
 			 * final do looping informando quando o memso irá ser finalizado
 			 */
-		} while (menu < 9);
+		//}// while (menu < 9);
 
 		/**
 		 * Mensagens finais do sistema para informar o fim da execução
 		 */
-		System.out.println("Volte Sempre!");
-		System.out.println("Fim");
+	//	System.out.println("Volte Sempre!");
+		//System.out.println("Fim");
 
+	//}
 	}
 }
+				
