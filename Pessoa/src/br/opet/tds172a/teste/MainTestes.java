@@ -1,5 +1,7 @@
 package br.opet.tds172a.teste;
 
+import java.util.Date;
+
 import br.opet.tds172a.pessoa.Pessoa;
 
 /**
@@ -40,28 +42,28 @@ public class MainTestes {
 		/**
 		 * informando os dados da pessoa e pegando o nome e data denascimento
 		 */
-		pessoaDaOutraEscola.informarPessoa("Enzo", "02-02-2000");
-		String nomeRetornado = pessoaDaOutraEscola.getNome();
-		String dataNascimentoRetornada = pessoaDaOutraEscola.getDataNascimento();
+		//pessoaDaOutraEscola.informarPessoa("Enzo", "02-02-2000");
+		//String nomeRetornado = pessoaDaOutraEscola.getNome();
+		//Date dataNascimentoRetornada = pessoaDaOutraEscola.getDataNascimento();
 
 		/**
 		 * Impressão do nome e data de nascimento retornados
 		 */
-		System.out.println(nomeRetornado);
-		System.out.println(dataNascimentoRetornada);
+		//System.out.println(nomeRetornado);
+		//System.out.println(dataNascimentoRetornada);
 
 		/**
 		 * informando os dados da pessoa e pegando o nome e data denascimento
 		 */
-		pessoaDaOutraEscola.informarPessoa("Valentina", "01-01-1999");
-		nomeRetornado = pessoaDaOutraEscola.getNome();
-		dataNascimentoRetornada = pessoaDaOutraEscola.getDataNascimento();
+		//pessoaDaOutraEscola.informarPessoa("Valentina", "01-01-1999");
+		//nomeRetornado = pessoaDaOutraEscola.getNome();
+		//dataNascimentoRetornada = pessoaDaOutraEscola.getDataNascimento();
 
 		/**
 		 * Impressão do nome e data de nascimento retornados
 		 */
-		System.out.println(nomeRetornado);
-		System.out.println(dataNascimentoRetornada);
+		//System.out.println(nomeRetornado);
+		//System.out.println(dataNascimentoRetornada);
 
 		/**
 		 * print para identificar fim do programa na console
