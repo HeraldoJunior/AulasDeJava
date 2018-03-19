@@ -6,6 +6,7 @@ import java.util.Date;
 import com.opet.util.Reader;
 
 import br.opet.tds172a.cargos.Funcionario;
+import br.opet.tds172a.util.MyReader;
 
 /**
  * 
@@ -52,7 +53,7 @@ public class MainComMenu {
 			System.out.println("Bem Vindo Ao Menu");
 			System.out.println("Digite a opção desejada");
 			System.out.println("1 - Adicionar Funcionario");
-			System.out.println("1 - Listar Funcionario");
+			System.out.println("2 - Listar Funcionario");
 			System.out.println("9 - Sair do Sistema");
 
 			/**
@@ -73,52 +74,50 @@ public class MainComMenu {
 			case 1:
 
 				if (contador < TAMANHO_LISTA_FUNCIONARIOS) {
-				/**
-				 * pergunta para o usuario inserir a matricula do funcionario a ser cadastrado
-				 */
-				System.out.println("Insira a Matricula do funcionario e aperte enter!");
-				/**
-				 * leitura do que for inserido na console para armazenar a matricula do usuario
-				 */
-				int matricula = Reader.readInt();
+					/**
+					 * pergunta para o usuario inserir a matricula do funcionario a ser cadastrado
+					 */
+					System.out.println("Insira a Matricula do funcionario e aperte enter!");
+					/**
+					 * leitura do que for inserido na console para armazenar a matricula do usuario
+					 */
+					int matricula = MyReader.readInt();
 
-				/**
-				 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
-				 */
-				System.out.println("Insira a Nome do funcionario e aperte enter!");
-				/**
-				 * leitura do que for inserido na console para armazenar o nome do usuario
-				 */
-				String nome = Reader.readString();
+					/**
+					 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
+					 */
+					System.out.println("Insira a Nome do funcionario e aperte enter!");
+					/**
+					 * leitura do que for inserido na console para armazenar o nome do funcionario
+					 */
+					String nome = MyReader.readString();
 
-				/**
-				 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
-				 */
-				System.out.println("Insira a Data de Nascimento do funcionario e aperte enter!");
-				/**
-				 * leitura do que for inserido na console para armazenar o nome do usuario
-				 */
-				String dataNascimentoString = Reader.readString();
+					/**
+					 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
+					 */
+					System.out.println("Insira a Data de Nascimento do funcionario e aperte enter!");
+					/**
+					 * leitura do que for inserido na console para armazenar a data de nascimento do funcionario
+					 */
+					Date dataNascimento = MyReader.readDate();
 
-				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+					
 
-				Date dataNascimento = sdf.parse(dataNascimentoString);
+					/**
+					 * Inicialização do objeto funcionario com matricula e nome
+					 */
+					Funcionario funcionarioNovo = new Funcionario(nome, dataNascimento, matricula);
 
-				/**
-				 * Inicialização do objeto funcionario com matricula e nome
-				 */
-				Funcionario funcionarioNovo = new Funcionario(nome, dataNascimento, matricula);
-
-				/**
-				 * leitura do que for inserido na console para armazenar o nome do usuario
-				 */
-				System.out.println("Cadastro do funcionario concluido com sucesso!");
-				/**
-				 * lista de funcionarios recebendo o funcionario novo e o contador incrementando
-				 * 1 posição para não sobrescrever
-				 */
-				listaFuncionarios[contador++] = funcionarioNovo;
-				}else {
+					/**
+					 * leitura do que for inserido na console para armazenar o nome do usuario
+					 */
+					System.out.println("Cadastro do funcionario concluido com sucesso!");
+					/**
+					 * lista de funcionarios recebendo o funcionario novo e o contador incrementando
+					 * 1 posição para não sobrescrever
+					 */
+					listaFuncionarios[contador++] = funcionarioNovo;
+				} else {
 					System.out.println("Lista de Funcionarios está cheia!");
 				}
 				break;
@@ -129,15 +128,32 @@ public class MainComMenu {
 
 			case 2: {
 
-				sdf = new SimpleDateFormat("dd/MM/yyyy");
+				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				System.out.println("Lista Funcionarios: ");
-				for (int j = 0; j < listaFuncionarios.length; j++) {
-					System.out.println(sdf.format(listaFuncionarios[contador].getDataNascimento()) + "-"
-							+ listaFuncionarios[j].getNome());
-				}
+				System.out.println("--------------------------------");
+				System.out.println("Data de Nascimento - Nome ");
+
+				//for (int j = 0; j < listaFuncionarios.length; j++) {
+			    //System.out.println(listaFuncionarios[j].getNome() + " - " + listaFuncionarios[j].getMatricula()
+				//			+ " -  " + sdf.format(listaFuncionarios[j].getDataNascimento()));
+				//}
+
+				/**
+				 * Para casos onde tenha posições vazias dentro da lista
+				 * 
+				 */
+				  
+				 for (int j = 0; j < listaFuncionarios.length; j++) {
+				  
+				 if(listaFuncionarios[j] != null){
+				 System.out.println(listaFuncionarios[j].getNome() + " - " +listaFuncionarios[j].getMatricula() + " -  " +
+				 sdf.format(listaFuncionarios[j].getDataNascimento())); } }
+				 
 			}
 
 			case 9:
+				System.out.println("--------------------------------");
+
 				System.out.println("Obrigado por utilizar o Sistema!");
 				break;
 			/**
