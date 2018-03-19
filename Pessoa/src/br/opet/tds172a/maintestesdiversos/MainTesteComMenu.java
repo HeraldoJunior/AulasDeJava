@@ -45,8 +45,7 @@ public class MainTesteComMenu {
 		 * looping para execução do menu e das operações necessarias de acordo com a
 		 * opção.
 		 */
-		
-		
+
 		do {
 			/**
 			 * Mensagens de boas vindas, e instruções das opções.
@@ -91,7 +90,7 @@ public class MainTesteComMenu {
 				 * leitura do que for inserido na console para armazenar o nome do usuario
 				 */
 				String nome = Reader.readString();
-				
+
 				/**
 				 * pergunta para o usuario inserir o nome do funcionario a ser cadastrado
 				 */
@@ -100,19 +99,15 @@ public class MainTesteComMenu {
 				 * leitura do que for inserido na console para armazenar o nome do usuario
 				 */
 				String dataNascimentoString = Reader.readString();
-				
+
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-				Date dataNascimento =  sdf.parse(dataNascimentoString);
-				
-				
+				Date dataNascimento = sdf.parse(dataNascimentoString);
 
 				/**
 				 * Inicialização do objeto funcionario com matricula e nome
 				 */
 				Funcionario funcionarioNovo = new Funcionario(nome, dataNascimento, matricula);
-				
-				
 
 				/**
 				 * leitura do que for inserido na console para armazenar o nome do usuario
@@ -125,9 +120,12 @@ public class MainTesteComMenu {
 				listaFuncionarios[contador] = funcionarioNovo;
 				contador++;
 
-				/**
-				 * Opção de listar os funcionarios existentes
-				 */
+				break;
+
+			/**
+			 * Opção de listar os funcionarios existentes
+			 */
+
 			case 2: {
 
 				sdf = new SimpleDateFormat("dd/MM/yyyy");
