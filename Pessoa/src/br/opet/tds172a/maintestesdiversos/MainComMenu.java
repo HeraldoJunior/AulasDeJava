@@ -16,7 +16,7 @@ import br.opet.tds172a.cargos.Funcionario;
  *          efetuar o cadastro de varios objetos com vetor
  * 
  */
-public class MainTesteComMenu {
+public class MainComMenu {
 
 	/**
 	 * constante que determina o tamanho da lista de funcionarios
@@ -117,9 +117,8 @@ public class MainTesteComMenu {
 				 * lista de funcionarios recebendo o funcionario novo e o contador incrementando
 				 * 1 posição para não sobrescrever
 				 */
-				listaFuncionarios[contador] = funcionarioNovo;
-				contador++;
-
+				listaFuncionarios[contador++] = funcionarioNovo;
+				
 				break;
 
 			/**
