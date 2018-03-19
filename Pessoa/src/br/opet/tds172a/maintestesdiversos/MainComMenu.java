@@ -1,6 +1,5 @@
 package br.opet.tds172a.maintestesdiversos;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -73,6 +72,7 @@ public class MainComMenu {
 			 */
 			case 1:
 
+				if (contador < TAMANHO_LISTA_FUNCIONARIOS) {
 				/**
 				 * pergunta para o usuario inserir a matricula do funcionario a ser cadastrado
 				 */
@@ -118,7 +118,9 @@ public class MainComMenu {
 				 * 1 posição para não sobrescrever
 				 */
 				listaFuncionarios[contador++] = funcionarioNovo;
-				
+				}else {
+					System.out.println("Lista de Funcionarios está cheia!");
+				}
 				break;
 
 			/**
@@ -129,9 +131,9 @@ public class MainComMenu {
 
 				sdf = new SimpleDateFormat("dd/MM/yyyy");
 				System.out.println("Lista Funcionarios: ");
-				for (int contadorListagem = 0; contadorListagem < listaFuncionarios.length; contadorListagem++) {
+				for (int j = 0; j < listaFuncionarios.length; j++) {
 					System.out.println(sdf.format(listaFuncionarios[contador].getDataNascimento()) + "-"
-							+ listaFuncionarios[contadorListagem].getNome());
+							+ listaFuncionarios[j].getNome());
 				}
 			}
 
