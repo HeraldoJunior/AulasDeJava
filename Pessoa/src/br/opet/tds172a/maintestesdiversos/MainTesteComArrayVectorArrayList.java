@@ -42,7 +42,7 @@ public class MainTesteComArrayVectorArrayList {
 		}
 		long fimLong2 = System.nanoTime();
 
-		System.out.println("Arraylist add...: " + (fimLong2 - inicioLong2));
+		System.out.println("Vector add...: " + (fimLong2 - inicioLong2));
 
 		/**
 		 * Lista com arraylist
