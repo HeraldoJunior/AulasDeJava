@@ -3,6 +3,7 @@ package br.opet.tds172a.maintestesdiversos;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.opet.util.Reader;
 
@@ -29,12 +30,9 @@ public class MainComMenu {
 	public static void main(String[] args) throws Exception {
 
 		/**
-		 * 
+		 * Arraylist para listagem de funcionarios
 		 */
-		// Funcionario[] listaFuncionarios = new
-		// Funcionario[TAMANHO_LISTA_FUNCIONARIOS];
-
-		ArrayList<Funcionario> listaDeFuncionarios = new ArrayList<Funcionario>();
+		List<Funcionario> listaDeFuncionarios = new ArrayList<Funcionario>();
 
 		/**
 		 * Declaração da variavel menu para utilização na switch
@@ -107,9 +105,13 @@ public class MainComMenu {
 				Date dataNascimento = MyReader.readDate();
 
 				/**
-				 * Inicialização do objeto funcionario com matricula e nome
+				 * criação do objeto funcionario que é recebido por "novoFuncionario"
 				 */
-				listaDeFuncionarios.add(new Funcionario(nome, dataNascimento, matricula));
+				Funcionario novoFuncionario = new Funcionario(nome, dataNascimento, matricula);
+				/**
+				 * inserção de um funcionario na lista por meio da criação do objeto com "novoFuncionario"
+				 */
+				listaDeFuncionarios.add(novoFuncionario);
 
 				/**
 				 * leitura do que for inserido na console para armazenar o nome do usuario
@@ -134,6 +136,10 @@ public class MainComMenu {
 				 * Arrumar a formatação da data.
 				 * 
 				 */
+				if(listaDeFuncionarios.size() == 0) {
+					System.out.println("Não existem funcionarios cadastrados");
+					break;
+				}
 				System.out.println("-------------------------");
 				System.out.println("Nomes Imprindo a Lista com Array List");
 				for (int i = 0; i < listaDeFuncionarios.size(); i++) {
