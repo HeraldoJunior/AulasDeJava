@@ -10,6 +10,11 @@ public class MyReader extends Reader {
 
 	private static Scanner scanner = new Scanner(System.in);
 
+	/**
+	 * Função criada para retornar a data no formato DATE quando é inserida no formato STRING
+	 * @return
+	 * @throws Exception
+	 */
 	public static final Date readDate() throws Exception {
 
 		String d = scanner.nextLine();

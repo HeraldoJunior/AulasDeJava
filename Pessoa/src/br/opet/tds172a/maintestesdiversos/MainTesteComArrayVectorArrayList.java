@@ -55,9 +55,9 @@ public class MainTesteComArrayVectorArrayList {
 		 * listaArrayListString.add("Maria ArrayList");
 		 * 
 		 * System.out.println("-------------------------");
-		 * System.out.println("Nomes Imprindo com Array List"); for (int i = 0; i <
-		 * listaArrayListString.size(); i++) { String objRecuperado =
-		 * listaArrayListString.get(i);
+		 * System.out.println("Nomes Imprindo com Array List"); 
+		 * for (int i = 0; i < listaArrayListString.size(); i++){ 
+		 * String objRecuperado = listaArrayListString.get(i);
 		 * 
 		 * System.out.println(objRecuperado); }
 		 */
