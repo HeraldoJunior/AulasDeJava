@@ -26,13 +26,20 @@ public class MainComMenu {
 	 * constante é um valor que nunca irá se alterar por hipotese alguma
 	 */
 	// public static final int TAMANHO_LISTA_FUNCIONARIOS = 2;
-
+	
 	public static void main(String[] args) throws Exception {
 
 		/**
 		 * Arraylist para listagem de funcionarios
 		 */
 		List<Funcionario> listaDeFuncionarios = new ArrayList<Funcionario>();
+		
+		/**
+		 * Formatação da data para utilizar do mesmo padrão em mais ocasiões caso necessario
+		 * 
+		 */
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setLenient(false);
 
 		/**
 		 * Declaração da variavel menu para utilização na switch
@@ -57,6 +64,7 @@ public class MainComMenu {
 			System.out.println("Digite a opção desejada");
 			System.out.println("1 - Adicionar Funcionario");
 			System.out.println("2 - Listar Funcionario");
+			System.out.println("3 - Remover todos os Funcionarios");
 			System.out.println("9 - Sair do Sistema");
 
 			/**
@@ -144,12 +152,14 @@ public class MainComMenu {
 				System.out.println("Nomes Imprindo a Lista com Array List");
 				for (int i = 0; i < listaDeFuncionarios.size(); i++) {
 					Funcionario funcionarioRecuperado = listaDeFuncionarios.get(i);
-					SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-					System.out.print(
-							"Nome.: " + funcionarioRecuperado.nome + " - Matricula.: " + funcionarioRecuperado.matricula
+					
+					System.out.println(
+							"Nome.: " + funcionarioRecuperado.nome + "- Matricula.: " + funcionarioRecuperado.matricula
 									+ " - Data de Nascimento.: " + sdf.format(funcionarioRecuperado.dataNascimento));
 				}
 
+				
+				// usando lista
 				// System.out.println("Lista Funcionarios: ");
 				// System.out.println("--------------------------------");
 				// System.out.println("Data de Nascimento - Nome ");
@@ -171,13 +181,24 @@ public class MainComMenu {
 				// System.out.println(listaFuncionarios[j].getNome() + " - "
 				// +listaFuncionarios[j].getMatricula() + " - " +
 				// sdf.format(listaFuncionarios[j].getDataNascimento())); } }
-
+				break;
 			}
+			
+			case 3:
+				
+				for (int i = listaDeFuncionarios.size() - 1; i >= 0; i--) {
+					listaDeFuncionarios.remove(i);
+					
+					System.out.println("Funcionario " + i + " Excluidos com sucesso!");
+
+				}
 
 			case 9:
 				System.out.println("--------------------------------");
-
 				System.out.println("Obrigado por utilizar o Sistema!");
+				System.out.println("Até a Proxima!");
+
+				System.out.println("--------------------------------");
 				break;
 			/**
 			 * Opção para caso alguma outra tecla seja in incorreta seja inserida, mensagem
