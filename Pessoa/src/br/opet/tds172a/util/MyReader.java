@@ -4,11 +4,66 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import com.opet.util.Reader;
-
-public class MyReader extends Reader {
+public class MyReader {
 
 	private static Scanner scanner = new Scanner(System.in);
+	
+	/**
+	 * Método de leitura com a classe scanner de uma variavel String digitada pelo console
+	 * @return
+	 */
+	public static final String readString(){
+        String text = scanner.nextLine();
+        return text;
+    }
+
+	/**
+	 * Método de leitura com a classe scanner de uma variavel Int digitada pelo console
+	 * @return
+	 */
+    public static final int readInt() throws Exception{
+        String i = scanner.nextLine();
+        int ii = 0;
+        try{
+            ii = Integer.parseInt(i);
+        }catch(Exception e){
+            System.out.println("Não foi possível transformar: " + i + " em Inteiro");
+            throw e;
+        }
+        return ii;
+    }
+
+    /**
+	 * Método de leitura com a classe scanner de uma variavel Double digitada pelo console
+	 * @return
+	 */
+    public static final double readDouble() throws Exception{
+        String db = scanner.nextLine();
+        double dd = 0;
+        try{
+            dd = Double.parseDouble(db);
+        }catch(Exception e){
+            System.out.println("Não foi possível transformar: " + db + " em Double");
+            throw e;
+        }
+        return dd;
+    }
+
+    /**
+	 * Método de leitura com a classe scanner de uma variavel Boolean digitada pelo console
+	 * @return
+	 */
+    public static final boolean readBoolean() throws Exception{
+        String b = scanner.nextLine();
+        boolean bb = false;
+        try{
+            bb = Boolean.parseBoolean(b);
+        }catch(Exception e){
+            System.out.println("Não foi possível transformar: " + b + " em Boolean");
+            throw e;
+        }
+        return bb;
+    }
 
 	/**
 	 * Função criada para retornar a data no formato DATE quando é inserida no formato STRING
